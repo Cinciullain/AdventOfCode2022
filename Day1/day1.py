@@ -1,4 +1,4 @@
-with open("calorieElfi.txt", "r") as file:
+with open("Day1/calorieElfi.txt", "r") as file:
     righeFile = file.readlines()
 
 for i in range(len(righeFile)):
