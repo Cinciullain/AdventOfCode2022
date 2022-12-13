@@ -8,8 +8,28 @@ for i in range(len(righeFile)):
     righeFile[i] = righeFile[i][:-1]
 
 
-c = "7"
-print(c)
+# Devo trovare il numero di cartelle la cui somma totale della dimensione sia >= 100000
+# Devo trovare un modo per salvare tutti i dati e potervi accedere in modo efficente, come una hashmap o un dizionario
 
-c += "8"
-print(c)
+dirCorrente = ""
+dirNuova = ""
+for riga in righeFile:
+    riga = riga.split(" ")
+    if riga[0] == "$":
+        if riga[1] == "cd":
+            print("siamo in cd")
+
+            if riga[2] == "..":
+                print("cartella prima")
+
+            else:
+                print("cartella indicata")
+
+        else:
+            print("siamo in ls")
+
+    elif riga[0] == "dir":
+        print("crea cartella")
+
+    else:
+        print("crea file")
