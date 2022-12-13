@@ -76,11 +76,8 @@ for i in range(10, len(righeFile)):
     # Inizio a spostare i dischi
     # Arrivato qua ho i numeri
     # Ho finito di leggere la riga, ora devo spostare i dischi
-    letteraAttuale = ""
     while quanti > 0:
-        letteraAttuale = stackList[daDove - 1].pop()
-        #stackList[perDove - 1].append(letteraAttuale)
-        stackList[perDove - 1] += letteraAttuale
+        stackList[perDove - 1].append(stackList[daDove - 1].pop())
         quanti -= 1
 
 # Ora prendo la cima di ogni stack
